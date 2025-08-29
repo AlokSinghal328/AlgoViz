@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <title>ALgoViz</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-source: "Source Sans 3", "sans-serif";
+        --font-fira: "Fira sans", "sans-serif";
+        --font-jetBrains: "JetBrains Mono", monospace;
+
+        --color-lightBackground: #fffdf9;
+        --color-lightNavBar: #f8f7f4;
+        --color-semiLightBackground: #eceae3;
+        --color-semiLightBackground2: #d9d9d9;
+        --color-darkBackground: #1e1e1e;
+        --color-darkBackground2: #36342e;
+
+        --color-lightText: #f8f7f4;
+        --color-siteTheme: #f76600;
+        --color-darkText: #201515;
+        --color-darkText2: #1e1e1e;
+        --color-semiDarkText: #767676;
+
+        --breakpoint-xs: 550px;
+        --breakpoint-2xl: 85rem; /*1360px*/
+        --breakpoint-3xl: 100rem;
+        --breakpoint-4xl: 125rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main w-full bg-lightBackground font-source text-darkText2">
+      <div class="bg-lightNavBar border-b-1 border-[#ECE9DF]">
+        <div
+          class="navbar flex justify-between items-center py-2 px-6 container mx-auto md:w-4/5 lg:w-3/4 xl:w-3/5"
+        >
+          <div class="flex items-center">
+            <a href="/"
+              ><h1 class="font-fira font-semibold text-[min(6vw,25px)] mr-8">
+                AlgoViz
+              </h1></a
+            >
+
+            <div class="nav-elems hidden md:flex gap-[min(2vw,15px)]">
+              <a
+                href="/pages/algorithms/algorithms.html"
+                class="text-sm hover:opacity-70 active:text-siteTheme"
+                >Start Here</a
+              >
+              <a
+                href="/pages/articles/articles.html"
+                class="text-sm hover:opacity-70 active:text-siteTheme"
+                >Articles</a
+              >
+              <a
+                href="/pages/solution/solution.html"
+                class="text-sm hover:opacity-70 active:text-siteTheme"
+                >Solutions</a
+              >
+              <a
+                href="/pages/aboutUs/aboutUs.html"
+                class="text-sm hover:opacity-70 active:text-siteTheme"
+                >About Us</a
+              >
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <a href="https://github.com/AlokSinghal328/AlgoViz">
+              <button
+                class="px-4 py-2 bg-siteTheme rounded-full text-lightText text-[min(3.5vw,16px)] font-semibold mr-2 leading-none cursor-pointer hover:bg-lightNavBar hover:text-darkText hover:ring-1 active:scale-95"
+              >
+                GitHub
+              </button>
+            </a>
+            <i id="menu-btn" class="ri-menu-line md:hidden font-semibold text-xl"></i>
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="fixed top-0 right-[-100%] w-full h-full bg-darkBackground2 text-lightText flex flex-col items-center justify-center gap-6 text-xl z-50 transition-all duration-300 ">
+  <button id="close-btn" class="absolute top-6 right-6 text-3xl">
+    <i class="ri-close-line"></i>
+  </button>
+              <a
+                href="/pages/algorithms/algorithms.html"
+                class="bg-darkBackground ring-black ring-1 shadow-[5px_5px_0px_0px_#000] py-1 w-40 flex justify-center rounded  hover:shadow-none active:text-siteTheme "
+                >Start Here</a
+              >
+              <a
+                href="/pages/articles/articles.html"
+                class="bg-darkBackground ring-black ring-1 shadow-[5px_5px_0px_0px_#000] py-1 w-40 flex justify-center rounded hover:shadow-none active:text-siteTheme "
+                >Articles</a
+              >
+              <a
+                href="/pages/solution/solution.html"
+                class="bg-darkBackground ring-black ring-1 shadow-[5px_5px_0px_0px_#000] py-1 w-40 flex justify-center rounded  hover:shadow-none active:text-siteTheme "
+                >Solutions</a
+              >
+              <a
+                href="/pages/aboutUs/aboutUs.html"
+                class="bg-darkBackground ring-black ring-1 shadow-[5px_5px_0px_0px_#000] py-1 w-40 flex justify-center rounded  hover:shadow-none active:text-siteTheme "
+                >About Us</a
+              >
+  </div>
+
+<a href="/images/Articles_Thumbnails/article-img-4.png"></a>
+        <script type="module" src="./src/navBar_mobile.js"></script>
+
+  </body>
+</html>

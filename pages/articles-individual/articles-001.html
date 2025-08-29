@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <title>ALgoViz</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-source:"Source Sans 3", "sans-serif";
+        --font-fira: "Fira sans", "sans-serif";
+        --font-jetBrains: "JetBrains Mono", monospace;
+
+        --color-lightBackground: #FFFDF9;
+        --color-lightNavBar: #F8F7F4;
+        --color-semiLightBackground: #ECEAE3;
+        --color-semiLightBackground2: #D9D9D9;
+        --color-darkBackground: #1E1E1E;
+        --color-darkBackground2: #36342E;
+
+        --color-lightText: #F8F7F4;
+        --color-siteTheme: #F76600;
+        --color-darkText: #201515;
+        --color-darkText2: #1E1E1E;
+        --color-semiDarkText: #767676;
+
+        --breakpoint-xs: 550px;
+        --breakpoint-2xl: 85rem; /*1360px*/
+        --breakpoint-3xl: 100rem;
+        --breakpoint-4xl: 125rem;
+      }
+    </style>
+</head>
+<body>
+    <div class="main w-full bg-lightBackground font-source text-darkText2"> 
+        <div class="bg-lightNavBar border-b-1 border-[#ECE9DF] ">
+            <div class="navbar flex justify-between items-center py-2 px-6 container mx-auto md:w-3/5">
+                <div class="flex items-center">
+                <h1 class="font-fira font-semibold text-[min(6vw,25px)] mr-8">AlgoViz</h1>
+
+                <div class="nav-elems hidden lg:flex gap-[min(2vw,15px)]">
+                    <a href="/pages/algorithms/algorithms.html" class="text-sm">Start Here</a>
+                    <a href="/pages/articles/articles.html" class="text-sm">Articles</a>
+                    <a href="/pages/solution/solution.html" class="text-sm">Solutions</a>
+                    <a href="/pages/aboutUs/aboutUs.html" class="text-sm">About Us</a>
+                </div>
+                </div>
+                
+                <div class="flex items-center">
+                <a href="www.github.com">
+                    <button class="px-4 py-2 bg-siteTheme rounded-full text-lightText text-[min(3.5vw,16px)] font-semibold mr-2 leading-none" >GitHub</button>
+                </a>
+                <i class="ri-menu-line lg:hidden font-semibold text-xl"></i>
+                </div>
+                
+       
+            </div>
+        </div>
+
+        <div class="article-page">
+            <div class="container mx-auto w-10/12 py-20 lg:w-8/12 ">
+                <div class="hero-article flex flex-col items-center gap-3 md:w-[600px] lg:w-[700px] mx-auto">
+                    <p class="text-[16px] ">Best apps - 12 min read</p>
+                    <h2 class="font-fira font-semibold text-[min(7.5vw,54px)] text-center leading-tight">The 6 best WordPress SEO plugins in 2025</h2>
+                    <p class="text-sm text-semiDarkText">By David Hartshorne · July 4, 2025</p>
+                </div>
+                <img src="/images/Articles-Thumbnail.jpg" alt="" class="w-fit mt-10 ring-1 lg:w-2xl mx-auto">
+
+                <div class="callout-section p-4 bg-semiLightBackground mt-10 leading-tight xl:w-4xl mx-auto">
+                        <p class="text-[min(3.5vw,18px)] md:text-xl">
+We independently review every app we recommend in our best apps lists. When you click some of the links on this page, we may earn a commission. Learn more.
+                        </p>
+                        
+                    </div>
+                <div class="intro-article flex flex-col items-start lg:w-[700px] mx-auto md:w-[600px]">
+                    
+
+                    <p class="mt-10 text-[min(3.5vw,18px)] leading-relaxed md:text-xl"> One of the first plugins I heard about when I started using WordPress was Yoast SEO. The name stuck—it rhymes with toast. I had no idea what SEO stood for, let alone why I needed an SEO plugin for WordPress. Since then, I've learned the value of SEO, and I've used both Yoast SEO or Rank Math on my WordPress sites. But they're not the only WordPress SEO plugins out there. 
+                    <br>
+                    Promote and publish your WordPress articles with automation Learn how 
+                    If you're looking for a WordPress SEO plugin to improve your chances of ranking higher in the search results, you've come to the right place. I considered and researched dozens of plugins and did in-depth testing on the top contenders to narrow it down to these six SEO plugins for WordPress.
+                    </p>
+
+                    <h4 class="font-fira font-semibold text-[min(5vw,32px)] mt-10">The best WordPress SEO plugins</h4>
+                    <ul class="list-disc list-outside mt-2 pl-6 text-[min(3.5vw,18px)] md:text-xl leading-relaxed">
+                        <li>Yoast SEO for content analysis and guidance</li>
+                        <li class="">Rank Math for a free plan and affordable scalability</li>
+                        <li>Yoast SEO for content analysis and guidance</li>
+                        <li>Yoast SEO for content analysis and guidance</li>
+                        <li>Yoast SEO for content analysis and guidance</li>
+                        <li>Yoast SEO for content analysis and guidance</li>
+                    </ul>
+                    <h4 class="font-fira font-semibold text-[min(5vw,32px)] mt-10">What makes the best WordPress SEO plugin?</h4>
+                    <div class="callout-section p-6 bg-semiLightBackground mt-10  sm:w-md md:w-lg mx-auto ">
+                        <h4 class="font-fira font-semibold text-[min(5vw,28px)]">How we evaluate and test apps
+</h4>
+<p class="mt-1 text-[min(3.5vw,18px)] md:text-xl leading-snug">
+Our best apps roundups are written by humans who've spent much of their careers using, testing, and writing about software. Unless explicitly stated, we spend dozens of hours researching and testing apps, using each app as it's intended to be used and evaluating it against the criteria we set for the category. We're never paid for placement in our articles from any app or for links to any site—we value the trust readers put in us to offer authentic evaluations of the categories and apps we review. For more details on our process, read the full rundown of how we select apps to feature on the Zapier blog.
+</p>
+                    
+                    </div>
+
+                    <p class="mt-10 text-[min(3.5vw,18px)] md:text-xl leading-relaxed">There are plenty of lists of the best WordPress SEO plugins, so what makes this one different? I didn't just read these apps' marketing materials and customer reviews. I spent dozens of hours researching and testing the best WordPress SEO plugins. I installed and activated each one in turn, followed the setup wizard instructions, and tested the SEO functionality.
+Here, I've focused on the best free and premium SEO plugins for WordPress. Unlike other WordPress plugins I've tested, the free versions of these plugins have enough functionality to cover the SEO essentials and more. You only need to invest in the premium versions for specialized features, such as advanced schemas or link management.
+The bottom line is that these WordPress SEO plugins all do much the same to varying degrees. But as I was testing the plugins, here's what I was looking for:
+<ul class="list-disc list-outside mt-2 pl-6 text-[min(3.5vw,18px)] md:text-xl leading-relaxed">
+                        <li class="pb-2">Setup. Unless you're a seasoned professional, the world of SEO can appear daunting with its raft of technical jargon and acronyms. Each of these plugins comes with a setup wizard, minimal config, and in most cases, the option to migrate settings from other SEO plugins.</li>
+                        <li class="pb-2">Setup. Unless you're a seasoned professional, the world of SEO can appear daunting with its raft of technical jargon and acronyms. Each of these plugins comes with a setup wizard, minimal config, and in most cases, the option to migrate settings from other SEO plugins.</li>
+                        <li class="pb-2">Setup. Unless you're a seasoned professional, the world of SEO can appear daunting with its raft of technical jargon and acronyms. Each of these plugins comes with a setup wizard, minimal config, and in most cases, the option to migrate settings from other SEO plugins.</li>
+                        <li class="pb-2">Setup. Unless you're a seasoned professional, the world of SEO can appear daunting with its raft of technical jargon and acronyms. Each of these plugins comes with a setup wizard, minimal config, and in most cases, the option to migrate settings from other SEO plugins.</li>
+                        <li class="pb-2">Setup. Unless you're a seasoned professional, the world of SEO can appear daunting with its raft of technical jargon and acronyms. Each of these plugins comes with a setup wizard, minimal config, and in most cases, the option to migrate settings from other SEO plugins.</li>
+                    </ul>
+                    <span class="text-[min(3.5vw,18px)] md:text-xl leading-relaxed">
+                        Overall, I whittled the list down to the six best SEO plugins for WordPress.
+                    </span> 
+                        
+
+</p>
+                    
+                    
+                </div>
+            </div>
+        </div>
+       
+        <div
+        class="ArticlesFeaturedANdRecent text-darkText2 border-t-2 border-[#ECE9DF]"
+      >
+        <div
+          class="container mx-auto w-10/12 xs:w-8/12 md:w-11/12 grid grid-cols-1 xl:grid-cols-3 place-items-center py-15 4xl:w-8/12"
+        >
+          <div id="articlesSectionFeatured"
+            class="articlesSection flex flex-col items-center mt-15 gap-10 sm:w-10/12 md:w-11/12 md:gap-x-5 xl:col-span-2 xl:items-start xl:border-r-2 border-[#ECE9DF]"
+          >
+            <h1
+              class="font-fira text-[min(6vw,60px)] font-bold xl:text-[min(4vw,60px)]"
+            >
+              Featured Articles
+            </h1>
+            
+            
+          </div>
+
+          <div id="articlesSectionRecent"
+            class="articles-recent flex flex-col items-center mt-20 gap-10 sm:w-10/12 md:w-11/12 md:gap-x-5 xl:items-start"
+          >
+            <h1 class="font-fira text-[min(6vw,60px)] font-bold xl:text-5xl">
+              Recent Articles
+            </h1>
+            
+            
+          </div>
+        </div>
+      </div>
+        
+        <div class="footer bg-lightNavBar text-darkText ">
+            <div class="container mx-auto w-10/12 py-30 xs:w-8/12 lg:w-10/12 xl:w-8/12 3xl:w-6/12  ">
+                <div class="flex flex-col items-start lg:flex-row w-full justify-between ">
+                    <div class="thelogo flex items-center gap-2">
+                        <i class="ri-asterisk text-siteTheme text-[min(12vw,60px)] font-bold"></i>
+                        <h4 class="text-[min(12vw,60px)] font-fira font-bold">AlgoViz</h4>
+                    </div>
+                    <div class="links-footer px-6 grid gap-10 grid-cols-2 md:grid-cols-3 max-lg:mt-20">
+                        <div class="elems flex flex-col gap-2 col-span-2 md:col-span-1">
+                            <h4 class="text-[min(4.5vw,20px)] font-semibold font-fira mb-1 text-darkText2">Quick Link</h4>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Algorithms</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Articles</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Solutions</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">About Us</a>
+                        </div>
+                        <div class="elems flex flex-col gap-2">
+                            <h4 class="text-[min(4.5vw,20px)] font-semibold font-fira mb-1 text-darkText2">Algorithms</h4>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Bubble Sort</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Selection Sort</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Insertion Sort</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Binary Search</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Merge Sort</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Quick Sort</a>
+                        </div>
+                        <div class="elems flex flex-col gap-2">
+                            <h4 class="text-[min(4.5vw,20px)] font-semibold font-fira mb-1 text-darkText2">Articles</h4>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Array</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Sorting</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Searching</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Stack & Queue</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Binary Tree</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Graphs</a>
+                            <a href="" class="text-[min(4vw,20px)] leading-none text-darkText">Heap</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-10 px-6">
+                    <i class="ri-linkedin-fill text-[30px] mr-1"></i>
+                    <i class="ri-instagram-line text-[30px] "></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script type="module" src="/src/featuredSection.js"></script>
+
+</body>
+</html>

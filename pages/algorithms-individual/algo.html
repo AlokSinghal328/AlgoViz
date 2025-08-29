@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <title>ALgoViz</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --font-source: "Source Sans 3", "sans-serif";
+        --font-fira: "Fira sans", "sans-serif";
+        --font-jetBrains: "JetBrains Mono", monospace;
+
+        --color-lightBackground: #fffdf9;
+        --color-lightNavBar: #f8f7f4;
+        --color-semiLightBackground: #eceae3;
+        --color-semiLightBackground2: #d9d9d9;
+        --color-darkBackground: #1e1e1e;
+        --color-darkBackground2: #36342e;
+
+        --color-lightText: #f8f7f4;
+        --color-siteTheme: #f76600;
+        --color-darkText: #201515;
+        --color-darkText2: #1e1e1e;
+        --color-semiDarkText: #767676;
+
+        --breakpoint-xs: 550px;
+        --breakpoint-2xl: 85rem; /*1360px*/
+        --breakpoint-3xl: 100rem;
+        --breakpoint-4xl: 125rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main w-full bg-lightBackground font-source text-darkText2">
+      <div class="bg-lightNavBar border-b-1 border-[#ECE9DF]">
+        <div
+          class="navbar flex justify-between items-center py-2 px-6 container mx-auto md:w-4/5 lg:w-3/4 xl:w-3/5"
+        >
+          <div class="flex items-center">
+            <a href="/"
+              ><h1 class="font-fira font-semibold text-[min(6vw,25px)] mr-8">
+                AlgoViz
+              </h1></a
+            >
+
+            <div class="nav-elems hidden md:flex gap-[min(2vw,15px)]">
+              <a
+                href="/pages/algorithms/algorithms.html"
+                class="text-sm hover:opacity-70 active:text-siteTheme"
+                >Start Here</a
+              >
+              <a
+                href="/pages/articles/articles.html"
+                class="text-sm hover:opacity-70 active:text-siteTheme"
+                >Articles</a
+              >
+              <a
+                href="/pages/solution/solution.html"
+                class="text-sm hover:opacity-70 active:text-siteTheme"
+                >Solutions</a
+              >
+              <a
+                href="/pages/aboutUs/aboutUs.html"
+                class="text-sm hover:opacity-70 active:text-siteTheme"
+                >About Us</a
+              >
+            </div>
+          </div>
+
+          <div class="flex items-center">
+            <a href="https://github.com/AlokSinghal328/AlgoViz">
+              <button
+                class="px-4 py-2 bg-siteTheme rounded-full text-lightText text-[min(3.5vw,16px)] font-semibold mr-2 leading-none cursor-pointer hover:bg-lightNavBar hover:text-darkText hover:ring-1 active:scale-95"
+              >
+                GitHub
+              </button>
+            </a>
+            <i
+              id="menu-btn"
+              class="ri-menu-line md:hidden font-semibold text-xl"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="fixed top-0 right-[-100%] w-full h-full bg-darkBackground2 text-lightText flex flex-col items-center justify-center gap-6 text-xl z-50 transition-all duration-300"
+      >
+        <button id="close-btn" class="absolute top-6 right-6 text-3xl">
+          <i class="ri-close-line"></i>
+        </button>
+        <a
+          href="/pages/algorithms/algorithms.html"
+          class="bg-darkBackground ring-black ring-1 shadow-[5px_5px_0px_0px_#000] py-1 w-40 flex justify-center rounded hover:shadow-none active:text-siteTheme"
+          >Start Here</a
+        >
+        <a
+          href="/pages/articles/articles.html"
+          class="bg-darkBackground ring-black ring-1 shadow-[5px_5px_0px_0px_#000] py-1 w-40 flex justify-center rounded hover:shadow-none active:text-siteTheme"
+          >Articles</a
+        >
+        <a
+          href="/pages/solution/solution.html"
+          class="bg-darkBackground ring-black ring-1 shadow-[5px_5px_0px_0px_#000] py-1 w-40 flex justify-center rounded hover:shadow-none active:text-siteTheme"
+          >Solutions</a
+        >
+        <a
+          href="/pages/aboutUs/aboutUs.html"
+          class="bg-darkBackground ring-black ring-1 shadow-[5px_5px_0px_0px_#000] py-1 w-40 flex justify-center rounded hover:shadow-none active:text-siteTheme"
+          >About Us</a
+        >
+      </div>
+
+      <div class="algo-control-panel">
+        <div
+          class="container mx-auto w-8/12 py-8 sm:w-10/12 lg:w-8/12 xl:w-10/12 3xl:w-8/12 4xl:w-1/2"
+        >
+          <div class="heading-algo flex gap-2">
+            <i class="ri-terminal-line text-siteTheme text-[min(6vw,48px)]"></i>
+            <h1
+              id="pageName"
+              class="font-fira font-semibold text-[min(6vw,48px)]"
+            ></h1>
+          </div>
+
+          <div
+            class="control-panel flex flex-wrap justify-between gap-y-2 items-center xl:justify-start"
+          >
+            <div
+              class="w-full flex justify-between items-center xl:w-96 xl:justify-start"
+            >
+              <label
+                class="text-[min(4.5vw,28px)] font-jetBrains leading-none tracking-tight"
+                >No. Of Elements :
+              </label>
+              <input
+                type="text"
+                class="input-space w-4/12 py-1 px-2 rounded-md bg-lightText ring-1 ring-darkText sm:w-[48%] md:w-1/2 xl:w-20 xl:ml-3"
+              />
+            </div>
+
+            <button
+              class="random-btn px-4 py-2 w-[48%] bg-siteTheme rounded-md text-lightText text-xl font-semibold leading-none sm:w-[23%] xl:w-28 xl:mr-4"
+            >
+              Random
+            </button>
+            <button
+              class="start-btn px-4 py-2 w-[48%] bg-darkBackground rounded-md text-lightText text-xl font-semibold leading-none sm:w-[23%] xl:w-32"
+            >
+              Start
+            </button>
+
+            <div
+              class="w-full flex justify-between items-center sm:w-1/2 xl:w-1/3 xl:justify-end xl:ml-auto"
+            >
+              <p
+                class="text-[min(4.5vw,28px)] font-jetBrains leading-none inline xl:mr-4"
+              >
+                Speed:
+              </p>
+              <button
+                class="speed-btn px-4 py-2 bg-darkBackground rounded-md text-lightText text-xl font-semibold leading-none flex gap-4 w-9/12 justify-evenly sm:w-48 md:w-8/12 xl:w-56"
+              >
+                <span>0.5x</span>
+                <span>1x</span>
+                <span>1.5x</span>
+                <span>2x</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="algo-screen my-5">
+        <div class="container mx-auto w-11/12 lg:w-10/12">
+          <div
+            class="card h-96 bg-semiLightBackground rounded-xl ring-2 shadow-[10px_10px_0px_0px_#000] md:h-[480px] max-w-[1200px] mx-auto xl:h-[min(40vw,680px)]"
+          >
+            <div
+              class="car-top flex items-center h-[28px] bg-siteTheme rounded-t-xl border-b-2 border-black px-3 xl:h-8"
+            >
+              <div class="flex items-center">
+                <span class="w-3 h-3 bg-red-500 rounded-full mr-1"></span>
+                <span class="w-3 h-3 bg-yellow-400 rounded-full mr-1"></span>
+                <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+              </div>
+              <div class="ml-4">
+                <button
+                  id="stop-btn"
+                  class="text-lightText text-sm bg-darkBackground2 px-3 rounded-md"
+                >
+                  Stop
+                </button>
+                <button
+                  id="reset-btn"
+                  class="text-lightText text-sm bg-darkBackground2 px-3 rounded-md"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+
+            <div
+              id="displayArea"
+              class="card-content bg-lightBackground mx-4 gap-0.5 flex items-end justify-center my-auto w-auto h-80 md:h-[420px] xl:h-[min(35vw,620px)] xl:m-6"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer bg-lightNavBar text-darkText">
+        <div
+          class="container mx-auto w-10/12 py-30 xs:w-8/12 lg:w-10/12 xl:w-8/12 3xl:w-6/12"
+        >
+          <div
+            class="flex flex-col items-start lg:flex-row w-full justify-between"
+          >
+            <div class="thelogo flex items-center gap-2">
+              <i
+                class="ri-asterisk text-siteTheme text-[min(12vw,60px)] font-bold"
+              ></i>
+              <h4 class="text-[min(12vw,60px)] font-fira font-bold">AlgoViz</h4>
+            </div>
+            <div
+              class="links-footer px-6 grid gap-10 grid-cols-2 md:grid-cols-3 max-lg:mt-20"
+            >
+              <div class="elems flex flex-col gap-2 col-span-2 md:col-span-1">
+                <h4
+                  class="text-[min(4.5vw,20px)] font-semibold font-fira mb-1 text-darkText2"
+                >
+                  Quick Link
+                </h4>
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Algorithms</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Articles</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Solutions</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >About Us</a
+                >
+              </div>
+              <div class="elems flex flex-col gap-2">
+                <h4
+                  class="text-[min(4.5vw,20px)] font-semibold font-fira mb-1 text-darkText2"
+                >
+                  Algorithms
+                </h4>
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Bubble Sort</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Selection Sort</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Insertion Sort</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Binary Search</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Merge Sort</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Quick Sort</a
+                >
+              </div>
+              <div class="elems flex flex-col gap-2">
+                <h4
+                  class="text-[min(4.5vw,20px)] font-semibold font-fira mb-1 text-darkText2"
+                >
+                  Articles
+                </h4>
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Array</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Sorting</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Searching</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Stack & Queue</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Binary Tree</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Graphs</a
+                >
+                <a
+                  href=""
+                  class="text-[min(4vw,20px)] leading-none text-darkText"
+                  >Heap</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mt-10 px-6">
+            <i class="ri-linkedin-fill text-[30px] mr-1"></i>
+            <i class="ri-instagram-line text-[30px]"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/randomArray.js"></script>
+    <script type="module" src="/src/visualSorting.js"></script>
+    <script type="module" src="algoScript.js"></script>
+  </body>
+</html>
+
