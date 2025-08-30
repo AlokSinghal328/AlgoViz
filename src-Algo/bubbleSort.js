@@ -24,6 +24,7 @@ function init() {
 
   document.querySelector(".start-btn").addEventListener("click", () => {
     if (!isStarted) {
+      isStoped = false;
       bubbleSort();
     }
   });
