@@ -1,6 +1,8 @@
 import { randomArray } from "../src/randomArray.js";
 import { plotArray } from "../src/visualSorting.js";
 
+const stopBtn = document.querySelector("#stop-btn");
+
 let array = [];
 let speed = 80;
 let isPaused = false;
@@ -36,7 +38,7 @@ function init() {
     });
   });
 
-  document.querySelector("#stop-btn").addEventListener("click", (e) => {
+  stopBtn.addEventListener("click", (e) => {
     isPaused = !isPaused;
     e.target.innerText = isPaused ? "Start" : "Stop";
   });
@@ -45,7 +47,10 @@ function init() {
     array = [];
     plotArray([]);
     isStarted = false;
+    isPaused = false;
     isStoped = true;
+
+    stopBtn.innerText = "Stop";
   });
 }
 
