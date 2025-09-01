@@ -4,7 +4,6 @@ import { plotArray } from "../src/visualSorting.js";
 const inputSpace = document.querySelector(".input-space");
 const stopBtn = document.querySelector("#stop-btn");
 
-
 let array = [];
 let sorted = [];
 
@@ -49,7 +48,8 @@ function init() {
 
   document.querySelector("#reset-btn").addEventListener("click", () => {
     array = [];
-    plotArray([]);
+    sorted = [];
+    plotArray([], [], []);
     isStarted = false;
     isPaused = false;
     isStoped = true;
@@ -59,6 +59,7 @@ function init() {
 }
 
 async function selectionSort() {
+  sorted = [];
   isStarted = true;
   for (let i = 0; i < array.length; i++) {
     let minIdx = i;
@@ -75,7 +76,7 @@ async function selectionSort() {
     [array[i], array[minIdx]] = [array[minIdx], array[i]];
     sorted.push(i);
   }
-  
+
   plotArray(array, [], sorted);
   isStarted = false;
 }
