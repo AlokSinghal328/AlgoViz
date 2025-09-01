@@ -1,5 +1,5 @@
 const params = new URLSearchParams(window.location.search);
-const algoName = params.get("algo"); // e.g., bubble-sort
+const algoName = params.get("algo"); // e.g., bubbleSort
 const pageName = document.querySelector("#pageName");
 
 if (algoName) {

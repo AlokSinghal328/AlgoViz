@@ -4,6 +4,7 @@ import { plotArray } from "../src/visualSorting.js";
 const stopBtn = document.querySelector("#stop-btn");
 
 let array = [];
+let sorted = [];
 let speed = 80;
 let isPaused = false;
 let isStarted = false;
@@ -63,10 +64,11 @@ async function bubbleSort() {
 
       if (array[j] > array[j + 1]) {
         [array[j], array[j + 1]] = [array[j + 1], array[j]];
-        plotArray(array, [j, j + 1]);
       }
+      plotArray(array, [j, j + 1], sorted);
       await new Promise((r) => setTimeout(r, speed));
     }
+    sorted.push(array.length - i - 1);
   }
   plotArray(array, []);
   isStarted = false;

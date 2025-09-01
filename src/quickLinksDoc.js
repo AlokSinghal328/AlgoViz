@@ -9,8 +9,8 @@ export const quickLinks = [
     s_c: "S.C. - O(N)",
   },
   {
-    name: "merge Sort",
-    url: "/pages/algorithms-individual/algo.html?algo=mergeSort",
+    name: "Selection Sort",
+    url: "/pages/algorithms-individual/algo.html?algo=selectionSort",
     icon: "ri-box-3-line",
     description:
       "The Bubble sort algorithm compares the next element and if the next element is small then both elements get swap and just like that all the largest elements are shifted at the end of the array",
