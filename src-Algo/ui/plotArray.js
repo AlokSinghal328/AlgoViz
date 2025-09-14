@@ -1,35 +1,32 @@
+// src/ui/plotArray.js
+
 export function plotArray(array, highlight = [], sorted = []) {
   const container = document.querySelector("#displayArea");
   container.innerHTML = "";
 
-  let contWidth = container.clientWidth;
-  contWidth = Math.floor(contWidth * 0.9);
-  let barWidth = Math.floor(contWidth / array.length);
-  barWidth = Math.min(barWidth, 20);
-  let fontSize = Math.min(barWidth, 13);
+  const contWidth = Math.floor(container.clientWidth * 0.9);
+  const barWidth = Math.min(Math.floor(contWidth / array.length), 20);
+  const fontSize = Math.min(barWidth, 13);
 
   array.forEach((value, idx) => {
     const bar = document.createElement("div");
 
-    // Style the bar
-
-    let bgColor = "#008000";
+    let bgColor = "#0072BB"; // default
+    if (sorted.includes(idx)) {
+      bgColor = "#008000";
+    }
     if (highlight.includes(idx)) {
       bgColor = "#FF0000";
     }
-    if (sorted.includes(idx)) {
-      bgColor = "#ff5e00ff";
-    }
+
     bar.className = `w-[${barWidth}px] h-[${
       (value / 100) * 95
     }%] bg-[${bgColor}] relative`;
-    // Create label element inside bar
+
     const label = document.createElement("span");
     label.textContent = value;
     label.className = "text-black w-full -top-6 text-center absolute";
-
-    // Dynamically scale font size based on bar width
-    label.style.fontSize = `${fontSize}px`; // Viewport width scaling
+    label.style.fontSize = `${fontSize}px`;
 
     bar.appendChild(label);
     container.appendChild(bar);

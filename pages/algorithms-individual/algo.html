@@ -136,13 +136,13 @@
 
       <div class="algo-control-panel">
         <div
-          class="container mx-auto w-8/12 py-8 sm:w-10/12 lg:w-8/12 xl:w-10/12 3xl:w-8/12 4xl:w-1/2"
+          class="container mx-auto w-8/12 py-8 sm:w-10/12 lg:w-8/12 xl:w-9/12 3xl:w-8/12 4xl:w-1/2"
         >
           <div class="heading-algo flex gap-2">
-            <i class="ri-terminal-line text-siteTheme text-[min(6vw,48px)]"></i>
+            <i class="ri-terminal-line text-siteTheme text-[min(6vw,40px)]"></i>
             <h1
               id="pageName"
-              class="font-fira font-semibold text-[min(6vw,48px)]"
+              class="font-fira font-semibold text-[min(6vw,40px)]"
             ></h1>
           </div>
 
@@ -185,9 +185,9 @@
                 class="speed-btn px-4 py-2 bg-darkBackground rounded-md text-lightText text-xl font-semibold leading-none flex gap-4 w-9/12 justify-evenly sm:w-48 md:w-8/12 xl:w-56"
               >
                 <span>0.5x</span>
-                <span>1x</span>
-                <span>1.5x</span>
+                <span class="text-siteTheme">1x</span>
                 <span>2x</span>
+                <span>4x</span>
               </button>
             </div>
           </div>
@@ -350,9 +350,11 @@
       </div>
     </div>
 
-    <script type="module" src="/src/randomArray.js"></script>
-    <script type="module" src="/src/visualSorting.js"></script>
+    <script type="module" src="/src-Algo/core/control.js"></script>
+    <script type="module" src="/src-Algo/core/state.js"></script>
+    <script type="module" src="/src-Algo/ui/controlPanel.js"></script>
+    <script type="module" src="/src-Algo/ui/plotArray.js"></script>
+    <script type="module" src="/src-Algo/utils/utils.js"></script>
     <script type="module" src="algoScript.js"></script>
   </body>
 </html>
-
